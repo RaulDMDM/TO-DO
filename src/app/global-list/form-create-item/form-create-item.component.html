@@ -1,0 +1,30 @@
+<fieldset>
+  <legend>ADD NEW TASK</legend>
+  <form
+    #createForm="ngForm"
+    (ngSubmit)="onSubmit(createForm); createForm.resetForm()"
+    validate
+  >
+    <label for="taskTitle">Task title</label>
+    <input
+      name="taskTitle"
+      type="text"
+      [(ngModel)]="newTask.title"
+      id="taskTitle"
+      required
+      placeholder="Enter task title"
+    />
+    <br />
+    <label for="taskDesc">Task description</label>
+    <input
+      name="taskDesc"
+      type="text"
+      [(ngModel)]="newTask.description"
+      id="taskDesc"
+      required
+      placeholder="Enter task description"
+    />
+    <br />
+    <button>CREATE TASK</button>
+  </form>
+</fieldset>

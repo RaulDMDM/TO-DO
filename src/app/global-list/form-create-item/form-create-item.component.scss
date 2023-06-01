@@ -1,0 +1,68 @@
+$font: 'Roboto', sans-serif;
+$darkBlue: #6990b6;
+$lightBlue: #8dbcea;
+
+
+fieldset{
+    display: flex;
+    justify-content: left;
+    border-radius: 20px;
+    border: 2px $lightBlue solid;
+    width: 50%;
+    height: auto;
+    margin: 10px auto 20px auto;
+    padding: 10px;
+    font-family: $font;
+    color: $darkBlue;
+    background-color: aliceblue;
+    font-size: 2vmin;
+}
+legend{
+    margin: auto;
+    font-weight: bold;
+    padding: 10px;
+    border-left: 2px $lightBlue solid;
+    border-right: 2px $lightBlue solid;
+    background-color: $darkBlue;
+    color: white;
+}
+
+form{
+    width: 100%;
+    text-align: center;
+}
+input{
+    margin:10px;
+    height: 1.5em;
+    border-radius: 20px;
+}
+button{
+    font-family: $font;
+    color: white;
+    border: 2px solid $lightBlue;
+    background-color: $darkBlue;
+    border-radius: 20px;
+    width: 30%;
+    height: auto;
+    font-size: 2vmin;
+    padding: 4px;
+}
+
+button:hover{
+    cursor: pointer;
+    scale: 105%;
+    box-shadow: black 2px 2px 2px;
+}
+
+button:active{
+    color: $darkBlue;
+    border: 2px solid $lightBlue;
+    background-color: white;
+}
+
+#taskDesc{
+    width: 70%;
+}
+#taskTitle{
+    width: 40%;
+}

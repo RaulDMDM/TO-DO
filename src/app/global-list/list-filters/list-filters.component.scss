@@ -1,0 +1,35 @@
+$font: 'Roboto', sans-serif;
+$darkBlue: #6990b6;
+
+
+button{
+    background-color: aliceblue;
+    border: none;
+    font-family: $font ;
+    font-size: 2vmin;
+    width: 33%;
+    height: 5vh;
+    border: $darkBlue 2px solid;
+    color: $darkBlue;
+    
+}
+
+button:hover{
+    background-color: $darkBlue;
+    color: white;
+    cursor: pointer;
+}
+
+span{
+    padding: 20px;
+    text-align: center;
+    font-size: 3vmin;
+    color: $darkBlue;
+}
+
+#mainContainer{
+    width: 50%;
+    margin:10px auto 20px auto;
+    font-family: $font ;
+    text-align: center;
+}

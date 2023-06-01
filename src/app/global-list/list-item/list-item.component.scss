@@ -1,0 +1,117 @@
+$font: 'Roboto', sans-serif;
+
+
+@mixin defButton(){
+    background-color: white;
+    border: #bd7f8a solid 2px;
+    border-radius: 50%;
+    margin: auto;
+    width:70px;
+    height: 70px;
+    align-self: center;
+    display: none; 
+}
+
+@mixin mainDisplay(){
+    display: flex;
+    margin: 6px auto 6px auto;
+    padding: 10px;
+    width: 50%;
+    height: 100px;
+    border-radius: 20px;
+    &:hover{
+        button{
+            display: flex;
+            margin-left: auto;
+        }
+    }
+    #checkBox:hover{
+        cursor: pointer;
+    }
+    button:hover{
+        cursor: pointer;
+    }
+}
+
+#taskData{
+    display:flex;
+    flex-direction: column;
+    width: 80%;
+    justify-content:space-around;
+    justify-self: left;
+}
+
+#taskTitle{
+    font-family: $font;
+    font-weight: bold;
+    font-size: 3vmin;
+    color: rgb(56, 56, 56);
+}
+#taskDesc{
+    font-family: $font;
+    font-size: 1.5vmin;
+    color: rgb(105, 105, 105);
+}
+
+#checkBox{
+    width: 50px;
+    height: 50px;
+    appearance: none;
+    background-color: white;
+    border: 2px black solid;
+    border-radius: 50%;
+    place-content: center;
+    align-self: center;
+}
+
+#checkBox:checked{
+    box-shadow:inset 0 0 0 3px white;
+    background-color: #5a7c71;
+}
+
+.completed{
+    @include mainDisplay();
+    background-color: #aadb98;
+    border: 2px #88bdab solid;
+    box-shadow:#88bdab 3px 3px;
+    opacity: 0.5;
+    #taskData{
+        text-decoration: line-through;
+    }
+    #checkBox{
+        border-color: #5a7c71
+    }
+
+    
+}
+
+.pending{
+    @include mainDisplay();
+    background-color: #fbdfe4;
+    border: 2px #f7a3b2 solid;
+    box-shadow: #f7a3b2 3px 3px;
+    #checkBox{
+        border-color: #bd7f8a
+    }
+}
+
+button{
+    @include defButton();
+    background:url('../../../assets/icons/deleteDefault.png')  no-repeat;
+    justify-self: end;
+    background-color:rgb(255, 255, 255);
+    background-size:50%;
+    background-position: center;
+    transition: all;
+}
+
+button:hover{
+    scale: 105%;
+    background: url('../../../assets/icons/delete.gif')  no-repeat;
+    background-color:rgb(255, 255, 255);
+    background-size:50%;
+    background-position: center;
+    box-shadow: black 0px 0px 7px;
+}
+
+

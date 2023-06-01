@@ -1,0 +1,15 @@
+<div id="listContainer">
+  <app-list-filters
+    (filterValue)="onFilterSelected($event)"
+    [taskList]="taskList"
+  ></app-list-filters>
+  <app-form-create-item
+    (validatedForm)="onValidatedForm($event)"
+  ></app-form-create-item>
+  <app-list-item
+    *ngFor="let task of taskList | filter : status"
+    [task]="task"
+    (deleteTask)="deleteTask($event)"
+    (sortTaskList)="sortTaskList()"
+  ></app-list-item>
+</div>

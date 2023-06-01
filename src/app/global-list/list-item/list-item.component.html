@@ -1,0 +1,18 @@
+<div
+  [ngClass]="{
+    completed: task.status === 'Complete',
+    pending: task.status === 'Pending'
+  }"
+>
+  <div id="taskData">
+    <span id="taskTitle">{{ task.title }}</span>
+    <span id="taskDesc">{{ task.description }}</span>
+  </div>
+  <input
+    type="checkbox"
+    (click)="changeStatus(task)"
+    [checked]="task.status == 'Complete'"
+    id="checkBox"
+  />
+  <button (click)="deleteItem(task)"></button>
+</div>

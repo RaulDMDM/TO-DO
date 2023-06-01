@@ -1,0 +1,7 @@
+<div id="mainContainer">
+  <span>Total tasks: {{ itemCount }} ({{ pendingCount }} tasks pending)</span>
+  <hr />
+  <button (click)="selFilter('')">Show all</button>
+  <button (click)="selFilter('Pending')">Show pending</button>
+  <button (click)="selFilter('Complete')">Show completed</button>
+</div>
